@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda">
     <title>AGENDALY</title>
     <link rel="stylesheet" href="../assets/styles/homepage.css">
     <link
@@ -44,47 +45,57 @@
           <!-- SideMenu -->
           <div class="side-menu-header">
             <h3>Mes agendas</h3>
-            <a href="/createAgenda?filterExist=<?=$filter_exist?>&filter=<?=($filter)?>&filterEvent=<?=($filter_event)?>&page=<?=$current_page?>"><i class="fa-regular fa-plus"></i></a>
+            <div class="side-menu-header-navbar">
+              <a 
+                href="/createAgenda?filterExist=<?=$filter_exist?>&filter=<?=($filter)?>&filterEvent=<?=($filter_event)?>&page=<?=$current_page?>">
+                <div class="create-agenda">
+                  <i class="fa-regular fa-plus"></i> Créer Agenda
+                </div> 
+              </a>
 
-            <form method="GET">
-              <select name="filter-is_public" id="filter-is_public" class="filter-choice" onchange="window.location = '/home?filterExist=<?=$filter_exist?>&filterEvent=<?=($filter_event)?>&page=<?=$current_page?>&filter='+this.value">
-                <option value="dateRecent" <?= ($filter === "dateRecent")?"selected":"" ?>>Date &uarr;</option>
-                <option value="dateFar" <?= ($filter === "dateFar")?"selected":"" ?>>Date &darr;</option>
-                <option value="public" <?= ($filter === "public")?"selected":"" ?> >Public</option>
-                <option value="private" <?= ($filter === "private")?"selected":"" ?> >Privé</option>
-              </select>
-            </form>
-
+              <form method="GET">
+                <select name="filter-is_public" id="filter-is_public" class="filter-choice" onchange="window.location = '/home?filterExist=<?=$filter_exist?>&filterEvent=<?=($filter_event)?>&page=<?=$current_page?>&filter='+this.value">
+                  <option value="dateRecent" <?= ($filter === "dateRecent")?"selected":"" ?>>Date &uarr;</option>
+                  <option value="dateFar" <?= ($filter === "dateFar")?"selected":"" ?>>Date &darr;</option>
+                  <option value="public" <?= ($filter === "public")?"selected":"" ?> >Public</option>
+                  <option value="private" <?= ($filter === "private")?"selected":"" ?> >Privé</option>
+                </select>
+              </form>
+            </div>
           </div>
         
           <div class="side-menu-body">
           
-            <form action="/home?filterExist=<?=$filter_exist?>&filter=<?=($filter)?>&filterEvent=<?=($filter_event)?>&page=<?=$current_page?>" method="POST">
-            <?php
-            if (!empty($owned_agendas)) {
-              foreach ($owned_agendas as $key=>$agenda) { ?>
-
+            <form 
+              action="/home?filterExist=<?=$filter_exist?>&filter=<?=($filter)?>&filterEvent=<?=($filter_event)?>&page=<?=$current_page?>" 
+              method="POST"
+            >
               <div class="agendas">
-                  <input id="agenda<?=$agenda['id']?>" class="agenda-toggle" type="checkbox" name="<?=$agenda['id']?>" <?= (!empty($_SESSION['checkedAgendas']) && in_array($agenda['id'], $_SESSION['checkedAgendas'])) ? 'checked' : ''?> />
-                  <label for="agenda<?=$agenda['id']?>" class="agenda"><?=$agenda['name']?></label>
-              <a href="/deleteAgenda?filterExist=<?=$filter_exist?>&filter=<?=($filter)?>&filterEvent=<?=($filter_event)?>&page=<?=$current_page?>&id=<?= $agenda['id']?>"><i class="fa-solid fa-trash"></i></a>
-            </div>
-            <?php } } ?>
-            
-            <div class="other-agendas"> <h3>Autres agendas</h3> </div>
-            
-            <?php
-              if (!empty($collaboratif_agendas)) {
-                foreach ($collaboratif_agendas as $key=>$agenda) { ?>
-
-                    <div class="agendas">
+                <?php
+                if (!empty($owned_agendas)) {
+                  foreach ($owned_agendas as $key=>$agenda) { ?>
+                    <div class="agenda">
                       <input id="agenda<?=$agenda['id']?>" class="agenda-toggle" type="checkbox" name="<?=$agenda['id']?>" <?= (!empty($_SESSION['checkedAgendas']) && in_array($agenda['id'], $_SESSION['checkedAgendas'])) ? 'checked' : ''?> />
-                      <label for="agenda<?=$agenda['id']?>" class="agenda"><?=$agenda['name']?></label>
+                      <label for="agenda<?=$agenda['id']?>" class="agenda-title"><?=$agenda['name']?></label>
+                      <a href="/deleteAgenda?filterExist=<?=$filter_exist?>&filter=<?=($filter)?>&filterEvent=<?=($filter_event)?>&page=<?=$current_page?>&id=<?= $agenda['id']?>"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                <?php } } ?>
+              </div>
+              
+              <h3 class="other-agendas-title">Autres agendas</h3>
+              <div class="agendas"> 
+                <?php
+                if (!empty($collaboratif_agendas)) {
+                  foreach ($collaboratif_agendas as $key=>$agenda) { ?>
+                    <div class="agenda">
+                      <input id="agenda<?=$agenda['id']?>" class="agenda-toggle" type="checkbox" name="<?=$agenda['id']?>" <?= (!empty($_SESSION['checkedAgendas']) && in_array($agenda['id'], $_SESSION['checkedAgendas'])) ? 'checked' : ''?> />
+                      <label for="agenda<?=$agenda['id']?>" class="agenda-title"><?=$agenda['name']?></label>
                       <a href="#">&nbsp;</a>
                     </div>
-            <?php } } ?>
-          
-            <input type="submit" name="submitAgenda" value="Valider">
+                <?php } } ?>
+              </div>
+              
+              <input type="submit" name="submitAgenda" value="Valider Agendas">
 
             </form>
 

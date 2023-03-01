@@ -2,7 +2,7 @@ body {
     font-family: "lato", sans-serif;
 }
 .title {
-    font-size: 62px;
+    font-size: 3rem;
     font-family: "cairo", sans-serif;
     font-weight: 500;
     text-align: center;
@@ -22,7 +22,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    height: 90vh;
+    min-height: 100vh;
 }
 .label-input {
     position: relative;
@@ -52,10 +52,7 @@ body {
 .radio-privacy {
     display: flex;
     justify-content: space-evenly;
-    margin: 20px 0;
-}
-input {
-    color: #8B8B8B;
+    margin: 45px 0;
 }
 input[type="radio"]
 {
@@ -139,7 +136,6 @@ input[type="radio"]:checked + label::after
     align-items: center;
     justify-content: center;
     font-family: "lato";
-    color: #8B8B8B;
 }
 
 .input-text/*:not(:placeholder-shown)*/ + .label,
@@ -150,15 +146,11 @@ input[type="radio"]:checked + label::after
 .input-text:focus + .label {
     color: #86BBD8;
 }
-
 .card .btn-save {
     color: #fff;
-    background: #DB93B0;
+    background: #f86ba3;
     text-decoration: none;
-    list-style: none;
     display: block;
-    height: 60px;
-    width: 335px;
     border-radius: 10px;
     text-align: center;
     font-size: 32px;
@@ -168,16 +160,19 @@ input[type="radio"]:checked + label::after
     margin-bottom: 25px;
     border: none;
     cursor: pointer;
-    margin: 50px auto;
-
+    margin: 25px auto 0 auto;
+    padding: 10px 30px;
 }
 .card .btn-save:hover {
     box-shadow: 0 10px 36px rgba(0, 0, 0, 0.32);
+    background: #f81872;
 }
 
 .message-event {
-   color: #d32c6f;
-   margin-top: 7px;
+    width: 100%;
+    color: #880a3c;
+    margin-top: 15px;
+    text-align: center;
 }
 
 @media screen and (max-width:800px) {
@@ -259,56 +254,4 @@ input[type="radio"]:checked + label::after
         font-size: 24px;
     }
    
-}
-
-@media screen and (max-height:800px) {
-    .title {
-        font-size: 32px;
-    }
-    .input-text {
-        font-size: 16px;
-        border: none;
-        border-radius: 10px;
-        background: #eee;
-        width: 450px;
-        height: 30px;
-        margin: 15px 0;
-        padding: 10px;
-        
-    }
-    .input-date {
-        width: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .textarea {
-        max-width: 450px;
-        min-width: 450px;
-        max-height: 80px;
-        min-height: 80px;
-    }
-    .label {
-        top: 40px;
-        left: 10px;
-        
-    }
-    .card .btn-save {
-       
-        height: 50px;
-        width: 200px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        margin: 1px auto 0;
-    
-    }
-    .message-event {
-        
-        margin: 2px;
-       
-       }
 }

@@ -3,7 +3,8 @@
 <head>
     <meta charSet="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
-    <title>Erreur 404</title>
+    <meta name="description" content="Agenda">
+    <title>AGENDALY - Error 404</title>
     <meta name="description" content="Blog"/>
 </head>
 <body>

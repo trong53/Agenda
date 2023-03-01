@@ -84,6 +84,5 @@ if (!empty($_POST['modifyEvent'])) {
         $message_modify_event = "Evènement modifié avec succès";
     }
 }
-
 $actual_event = getEventbyIDevent($_SESSION['modifyEvent']);
 require views('modifyEvent');

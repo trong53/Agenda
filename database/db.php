@@ -1,10 +1,10 @@
 <?php
 
-require_once 'config.php';
+require_once './config.php';
 
 try {
     $connection = new PDO(
-        'mysql:host=' . CONFIG['database']['host'] . ';dbname=' . CONFIG['database']['dbname'] . ';charset=utf8',
+        'mysql:host=' . CONFIG['database']['host'] . ';dbname=' . CONFIG['database']['db_name'] . ';charset=utf8',
         CONFIG['database']['user'],
         CONFIG['database']['password']
     );

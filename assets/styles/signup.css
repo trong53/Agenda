@@ -112,13 +112,14 @@ form.signup-form input:focus {
     color : rgb(243, 103, 103);
 }
 
-  @media screen and (max-width : 850px) {
+@media screen and (max-width : 850px) {
     .welcome-container {
         background: url('../img/Img-Signup.png');
         display: none;
     }
-  }
-  @media screen and (max-width : 1950px) {
+}
+
+@media screen and (max-width : 1950px) {
   
     body {
         font-size: 1.2rem;
@@ -139,13 +140,12 @@ form.signup-form input:focus {
         width: 370px;
     }
     form.signup-form button[type="submit"]{
-        width: 370px;
-        
-  }
-  }
+        width: 370px;   
+    }
+}
 
 
-  @media screen and (max-width : 1075px) {
+@media screen and (max-width : 1075px) {
   
     body {
         font-size: 1.2rem;
@@ -162,7 +162,7 @@ form.signup-form input:focus {
     .signup-form input {
         
         width: 390px;  
-    padding: 12px;
+        padding: 12px;
     }
     form.signup-form input[type="text"]{
         width: 390px;
@@ -172,9 +172,7 @@ form.signup-form input:focus {
         width: 390px;
         padding: 12px;
     }
-    
-
-  }
+}
 
 @media screen and (max-width : 850px) {
     .sign-up {
@@ -202,7 +200,7 @@ form.signup-form input:focus {
     form.signup-form input[type="text"]{
         width: 600px;
     }
-  }
+}
 
 
 @media screen and (max-width : 700px){
@@ -213,18 +211,18 @@ form.signup-form input:focus {
    }
  
    form.signup-form {
-    row-gap: 11px;
+        row-gap: 11px;
    }
     
-   h1 {
-    height: 46px;
-    font-size: 3rem;
-    font-weight: 600;
-   }
+    h1 {
+        height: 46px;
+        font-size: 3rem;
+        font-weight: 600;
+    }
    body {
-    font-size: 1.2rem;
+        font-size: 1.2rem;
    }
-  }
+}
 
 
 @media screen and (max-width : 550px){
@@ -234,7 +232,7 @@ form.signup-form input:focus {
         grid-template-rows: 100%;
    }
    .signup-form {
-    margin-top: 40px;
+        margin-top: 40px;
    }
     h1 {
         height: 30px;
@@ -242,25 +240,23 @@ form.signup-form input:focus {
         font-weight: 600;
     }
     body {
-    font-size: 1.6rem;
+        font-size: 1.6rem;
    }
    form.signup-form {
-    row-gap: 15px;
+        row-gap: 15px;
    }
    .signup-form input {
-    padding: 11px; 
+        padding: 11px; 
     
     }
     form.signup-form input[type="text"]{
-    padding: 11px; 
+        padding: 11px; 
     
     }
     form.signup-form button[type="submit"]{
-    padding: 11px;
-    
+        padding: 11px; 
     }
-
-  }
+}
 @media screen and (max-width : 450px){
 
     .sign-up {
@@ -268,30 +264,27 @@ form.signup-form input:focus {
         grid-template-rows: 100%;
    }
    .signup-form {
-    margin-top: 60px;
+        margin-top: 60px;
    }
     h1 {
         font-size: 3.5rem;
         font-weight: 600;
     }
     body {
-    font-size: 1.8rem;
+        font-size: 1.8rem;
    }
    form.signup-form {
-    row-gap: 18px;
+        row-gap: 18px;
    }
    .signup-form input {
-    padding: 17px; 
-    
+        padding: 17px; 
     }
     form.signup-form input[type="text"]{
-    padding: 17px; 
-   
-}
-form.signup-form button[type="submit"]{
-padding: 17px;
-
- }
+        padding: 17px; 
+    }
+    form.signup-form button[type="submit"]{
+        padding: 17px;
+    }
 
 }
 
@@ -300,31 +293,27 @@ padding: 17px;
     .sign-up {
         display: grid;
         grid-template-rows: 100%;
-   }
+    }
    .signup-form {
-   
-    margin-top: 120px;
+        margin-top: 120px;
     }
     h1 {
         font-size: 3.8rem;
         font-weight: 600;
     }
     body {
-    font-size: 2.6rem;
-   }
-   form.signup-form {
-    row-gap: 22px;
-   }
-   .signup-form input {
-    padding: 20px; 
-    
-}
-form.signup-form input[type="text"]{
-    padding: 20px; 
-   
-}
-form.signup-form button[type="submit"]{
-padding: 20px;
-
- }
+        font-size: 2.6rem;
+    }
+    form.signup-form {
+        row-gap: 22px;
+    }
+    .signup-form input {
+        padding: 20px; 
+    }
+    form.signup-form input[type="text"]{
+        padding: 20px; 
+    }
+    form.signup-form button[type="submit"]{
+    padding: 20px;
+    }
 }

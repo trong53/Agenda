@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Agenda">
+    <title>AGENDALY - Create agenda</title>
     <link rel="stylesheet" href="../assets/styles/Posts.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
             <input type="text" class="input-text" name="name" id="name" placeholder="&nbsp;" />
             <span class="label">Nom</span>
           </label>
-          <div class="radio-privacy">
+        <div class="radio-privacy">
           <div>
             <input type="radio" id="public" name="is_public" value='1'>
             <label for="public">public</label>
@@ -31,7 +32,7 @@
         </div>
 
           <label class="label-input">
-            <input type="text" class="input-text" placeholder="&nbsp;" name="invite" />
+            <input type="text" class="input-text input-text-invite" placeholder="mail_1@email.com, mail_2@email.com, ..." name="invite" />
             <span class="label">Inviter des membres</span>
           </label>
           <button type="submit" name="submitAgenda" class="btn-save">Enregistrer</button>

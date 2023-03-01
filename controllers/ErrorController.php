@@ -1,3 +1,3 @@
 <?php
 
-require_once views('error');
+require views('error');

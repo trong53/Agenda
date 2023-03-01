@@ -72,10 +72,3 @@ if (!empty($_POST['submitAgenda']) || !empty($_SESSION['checkedAgendas'])) {
     }
 }
 require views('Home');
-
-/*
-
-them ? page, filter va filterEvent vao trong link cua modifierevent and task - homeview
-
-delete Agenda : lay Id agenda, kiem tra creator cua Agenda va xoa cac event ben trong
-*/
